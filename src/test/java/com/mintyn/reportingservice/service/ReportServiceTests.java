@@ -19,7 +19,7 @@ public class ReportServiceTests {
     @MockBean
     private KafkaConsumerService kafkaConsumerService;
 
-    private ReportService reportService = new ReportServiceImp(kafkaConsumerService);
+    private final ReportService reportService = new ReportServiceImp(kafkaConsumerService);
 
     @Test void throwError_ifKafka_returnsNullOrder() {
         given(kafkaConsumerService.getOrder()).willReturn(null);
