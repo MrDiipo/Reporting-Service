@@ -10,11 +10,6 @@ jobs:
       security-events: write
     strategy:
       fail-fast: false
-      matrix:
-        project: [
-                   publisher,
-                   server
-        ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
